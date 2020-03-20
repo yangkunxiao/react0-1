@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+input::-ms-clear{
+  display: none!important;
+}
+input::-ms-reveal{
+  display: none!important;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+html,
+body {
+	overflow: visible!important;
+	background-color: #f6f6f6;
+	color: #333;
+	min-width: 1280px;
+	font-size: 14px;
+	font-family: "Arial";
+	height: 100%;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	outline: none;/* 解决火狐下点击出现虚线问题 */
+}
+
+#root{
+	height: 100%;
+}

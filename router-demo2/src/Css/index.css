@@ -1,0 +1,41 @@
+.mainDiv{
+    display: flex;
+    height: 100%;
+}
+
+.mainDiv .leftNav{
+    width: 150px;
+    height: 100%;
+    background-color: #010101;
+    color: #fff;
+}
+
+.mainDiv .leftNav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainDiv .leftNav ul li{
+    line-height: 36px;
+    text-align: center;
+}
+
+.mainDiv .rightMain{
+    flex: 1;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+/*兼容ie*/
+
+.clearfix {
+	zoom: 1;
+}

@@ -1,0 +1,10 @@
+.videoDiv{
+    margin: 20px;
+}
+.videoDiv ul {
+    margin-bottom: 30px;
+}
+.videoDiv ul li{
+    float: left;
+    margin-right: 20px;
+}
