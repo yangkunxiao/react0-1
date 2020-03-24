@@ -1,0 +1,32 @@
+HashHistory: window.onhashchange 监听hash变化
+
+BrowserHistory:
+    html5 api:
+        pushState()：浏览器不会向服务端发送请求，直接改变URL地址，浏览器会记录pushState的值，改变history栈，可用于浏览器前进后退
+            history.pushState(state, title, url)
+                state: 可以通过history.state读取
+                title: 可选参数，暂时没有用，建议传个短标题
+                url: 改变过后的url地址、
+        replaceState(): 仅仅修改对应的state
+            history.replaceState(state, title, url)
+        onpopstate():当用户在浏览器点击进行后退、前进，或者在js中调用histroy.back()，history.go()，history.forward()等，会触发popstate事件；但pushState、replaceState不会触发这个事件
+            window.onpopstate = function(e) {
+                console.log(JSON.stringify(e.state));     
+            }
+MemoryHistory
+
+1、web：react-router native：react-router-native 
+2、Link、NavLink
+    Link：a标签。to：string object function 
+    NavLink：可以自由设置样式 类名
+3、导航：
+    路由式导航：Link、NavLink
+    函数式导航：props.router.push/replace
+4、传参：
+    params：props.match.params  : params = useParams()解构
+    query：props.location.search : query = useQuery();
+
+5、 const hsitory = useHistory(); 
+    const location = useLocation();
+    const match = useRouteMatch()
+    const query = useQuery();
