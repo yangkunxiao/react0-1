@@ -12,7 +12,6 @@ class Example extends Component {
         })
     }
 
-    componentWillUn
 
     render() { 
         return ( 
