@@ -17,10 +17,25 @@ const mapDispatchToProps = {
     fetchData
 }
 
-class RedexCounter extends Component {
+class ReduxCounter extends Component {
+    constructor(){
+        super();
+        this.state = {
+            count : 0
+        }
+    }
     componentDidMount(){
         this.props.fetchData().then(res => {
             console.log(res,'json')
+        })
+        this.setState({
+            count:this.state.count + 1
+        })
+        this.setState(() => {
+            return {count:this.state.count + 1}
+        })
+        this.setState({
+            count:this.state.count + 1
         })
     }
 	add() {
@@ -50,4 +65,4 @@ class RedexCounter extends Component {
 }
 //传入mapStateToProps之后，组件会订阅store中状态的变化
 //mapDispatchToProps作为第二个参数，
-export default connect(mapStateToProps,mapDispatchToProps)(RedexCounter)
+export default connect(mapStateToProps,mapDispatchToProps)(ReduxCounter)
